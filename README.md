@@ -1,27 +1,103 @@
-# AppCensoAngular
+# Desafio Laravel/Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+Este projeto contém a parte backend construída em Laravel e o frontend em Angular. O backend processa o upload de um censo, armazena temporariamente os dados e permite a confirmação para salvar os dados finais.
 
-## Development server
+# Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-## Code scaffolding
+PHP >= 8.1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Composer >= 2.x
 
-## Build
+Node.js >= 16.x
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+NPM >= 8.x
 
-## Running unit tests
+MySQL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instruções para o Backend (Laravel)
+Clone o repositório:
 
-## Running end-to-end tests
+``` 
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+cd seu-repositorio/backend
+```
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Instale as dependências do Laravel:
+
+
+```
+composer install
+```
+
+# Configuração do banco de dados:
+
+Copie o arquivo de exemplo .env:
+
+```
+cp .env.example .env
+```
+
+Abra o arquivo .env e configure as variáveis de banco de dados:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nome_do_banco
+DB_USERNAME=usuario
+DB_PASSWORD=senha
+```
+
+Gere a chave da aplicação:
+
+```
+php artisan key:generate
+```
+
+
+Execute as migrações:
+
+```
+php artisan migrate
+```
+
+
+Suba o servidor de desenvolvimento:
+
+```
+php artisan serve
+```
+
+O backend estará rodando em http://127.0.0.1:8000.
+
+
+
+# Instruções para o Frontend (Angular)
+
+Clone o repositório:
+
+``` 
+git clone https://github.com/Lauroflorenca/desafio-censo-front.git
+```
+
+
+
+Instale as dependências do Angular:
+
+```
+npm install
+```
+
+Rode o servidor de desenvolvimento:
+
+```
+ng serve
+```
+
+O frontend estará rodando em http://localhost:4200.

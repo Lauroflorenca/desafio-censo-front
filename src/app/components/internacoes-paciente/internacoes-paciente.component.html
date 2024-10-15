@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Internações do Paciente</h1>
+    <fieldset style="width: 80%;">
+      <legend>{{paciente.nome}}</legend>
+      <p><b>Código:</b> {{paciente.codigo}}</p>
+      <p><b>Nascimento:</b> {{ paciente.nascimento }}</p>
+     </fieldset>
+    <table class="tabela-roxa">
+      <thead>
+        <tr>
+          <th>Guia</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let internacao of internacoes">
+          <td>{{ internacao.guia }}</td>
+          <td>{{ internacao.entrada }}</td>
+          <td>{{ internacao.saida || 'Ainda internado' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

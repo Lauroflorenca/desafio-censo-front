@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Censo Temporário</h2>
+
+  <table class="tabela-roxa">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>Código</th>
+        <th>Guia</th>
+        <th>Entrada</th>
+        <th>Saída</th>
+        <th>Status</th>
+        <th>Mensagem de Erro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let linha of censoTemporario">
+        <td>{{ linha.nome }}</td>
+        <td>{{ linha.nascimento }}</td>
+        <td>{{ linha.codigo }}</td>
+        <td>{{ linha.guia }}</td>
+        <td>{{ linha.entrada }}</td>
+        <td>{{ linha.saida }}</td>
+        <td>{{ linha.valido ? 'Válido' : 'Inválido' }}</td>
+        <td>{{ linha.mensagem_erro }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: flex; gap:4%; width: 50%; margin-bottom: 4%; margin-top: 2%;">
+    <button (click)="limparTabela()" class="btn_opc" style="background: #041104e6; ">Limpar Tabela</button>
+    <button (click)="excluirInvalidos()" class="btn_opc" style="background: #b32c2ce6; ">Exclui Inválidos</button>
+    <button (click)="confirmarCadastro()" class="btn_opc" style="background: #2cb32ce6; ">Confirmar Censo</button>
+  </div>
+
+</div>

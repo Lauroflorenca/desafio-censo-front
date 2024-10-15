@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.btn_opc{
+    color: white; font-weight: bold; border: none; width: 50%; padding: 1%; border-radius: 7px;
+}
+
+nav {
+    background-color: #6a0dad; 
+    padding: 1rem; 
+  }
+  
+  nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+  }
+  
+  nav li {
+    margin: 0.5rem; 
+  }
+  
+  nav a {
+    text-decoration: none; 
+    color: white;
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+  }
+  
+  nav a:hover {
+    background-color: #4f3e63; 
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  }
+  
+
+
+  .tabela-roxa {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .tabela-roxa th, .tabela-roxa td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  .tabela-roxa thead {
+    background-color: #6a0dad; 
+    color: #ffffff;
+  }
+  
+  .tabela-roxa tbody tr {
+    background-color: #ffffff; 
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .tabela-roxa tbody tr:hover {
+    background-color: #e9e9ff;
+  }
+  
+  .tabela-roxa tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  @media (max-width: 600px) {
+    .tabela-roxa {
+      font-size: 14px; 
+    }
+  
+    .tabela-roxa th, .tabela-roxa td {
+      padding: 10px 8px; 
+    }
+  }

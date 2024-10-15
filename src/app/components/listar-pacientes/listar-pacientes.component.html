@@ -1,0 +1,24 @@
+  <div class="container">
+    <h1>Lista de Pacientes</h1>
+    <table class="tabela-roxa">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Nascimento</th>
+          <th>Código</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paciente of pacientes">
+          <td>{{ paciente.nome }}</td>
+          <td>{{ paciente.nascimento }}</td>
+          <td>{{ paciente.codigo }}</td>
+          <td>
+            <button (click)="irParaInternacoes(paciente.id)">Ver Internações</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
